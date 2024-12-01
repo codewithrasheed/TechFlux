@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to JavaScript</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Header Open -->
+    <header class='flex py-3 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide relative z-50'>
+      <div class='flex justify-between flex-wrap items-center gap-5 w-full'>
+          <a href="/" class="font-bold text-2xl">TechFlux</a>
+
+          <div id="collapseMenu"
+              class='max-lg:hidden lg:!block max-lg:w-full max-lg:fixed max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50'>
+              <button id="toggleClose" class='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white w-9 h-9 flex items-center justify-center border'>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 fill-black" viewBox="0 0 320.591 320.591">
+                      <path
+                          d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
+                          data-original="#000000"></path>
+                      <path
+                          d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
+                          data-original="#000000"></path>
+                  </svg>
+              </button>
+
+              <ul class='lg:flex lg:ml-14 lg:gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
+                  <li class='mb-6 hidden max-lg:block'>
+                      <a href="/" class="font-bold text-2xl">TechFlux</a>
+                  </li>
+                  <li class='max-lg:border-b max-lg:py-3 px-3'>
+                      <a href='index.html' class='lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]'>Home</a>
+                  </li>
+                  <li class='max-lg:border-b max-lg:py-3 px-3'>
+                      <a href='about.html' class='lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]'>About</a>
+                  </li>
+                  <li class='max-lg:border-b max-lg:py-3 px-3'>
+                      <a href='contact.html' class='lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]'>Contact</a>
+                  </li>
+              </ul>
+          </div>
+
+          <button id="toggleOpen" class='lg:hidden ml-auto'>
+              <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                      d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                      clip-rule="evenodd"></path>
+              </svg>
+          </button>
+      </div>
+  </header>
+<!-- Header Close -->
+
+
+  <!-- Banner Open -->
+  <div class="relative font-sans before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10 ">
+    <img src="https://readymadeui.com/cardImg.webp" alt="Banner Image" class="absolute inset-0 w-full h-full object-cover" />
+
+    <div class="min-h-[550px] relative z-30 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
+      <h2 class="sm:text-4xl text-2xl font-bold mb-6">Introduction to JavaScript</h2>
+      <p class="sm:text-lg text-base text-center text-gray-200 w-full xl:w-[700px]">JavaScript is the backbone of modern web development, transforming static websites into dynamic, interactive platforms. Dive into how it enables real-time updates, user interactions, and smooth navigation, making the web more engaging and functional than ever before.</p>
+    </div>
+  </div>
+  <!-- Banner Close -->
+  
+      <!-- Main Content -->
+      <main class="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-md my-8">
+        <section>
+          <h2 class="text-2xl font-semibold mb-4">What is JavaScript?</h2>
+          <p class="mb-4">
+            JavaScript (often abbreviated as JS) is a
+            <strong>high-level, interpreted programming language</strong>. It's
+            the standard scripting language for the web, used to enhance HTML
+            pages and build responsive, interactive websites. Unlike HTML and CSS,
+            which are used to structure and style a webpage, JavaScript allows you
+            to create elements that react to user input and change dynamically.
+          </p>
+  
+          <h3 class="text-xl font-semibold mt-6 mb-2">
+            Key Features of JavaScript:
+          </h3>
+          <ul class="list-disc list-inside space-y-2">
+            <li>
+              <strong>Client-side scripting</strong>: Runs directly in the browser
+              to interact with HTML and CSS.
+            </li>
+            <li>
+              <strong>Event-driven programming</strong>: Respond to user actions
+              like clicks, form submissions, etc.
+            </li>
+            <li>
+              <strong>Lightweight and fast</strong>: Efficient and doesn't require
+              external servers to run.
+            </li>
+            <li>
+              <strong>Cross-platform</strong>: Works across all modern browsers
+              and platforms.
+            </li>
+          </ul>
+        </section>
+  
+        <section class="mt-8">
+          <h2 class="text-2xl font-semibold mb-4">Why Learn JavaScript?</h2>
+          <p class="mb-4">
+            JavaScript is one of the most in-demand languages in the tech
+            industry. It's not only essential for front-end development but also
+            plays a huge role in back-end development, mobile app development, and
+            even game design.
+          </p>
+          <h3 class="text-xl font-semibold mt-6 mb-2">
+            Key reasons to learn JavaScript:
+          </h3>
+          <ul class="list-disc list-inside space-y-2">
+            <li>
+              <strong>Front-End Interactivity:</strong> Add dynamic features like
+              forms, animations, and user-triggered events.
+            </li>
+            <li>
+              <strong>DOM Manipulation:</strong> Update page content, change
+              styles, and more, all without a page refresh.
+            </li>
+            <li>
+              <strong>Asynchronous Programming:</strong> Fetch and load data
+              dynamically using AJAX and fetch APIs.
+            </li>
+            <li>
+              <strong>Full-Stack Development:</strong> With Node.js, you can use
+              JavaScript for both front-end and back-end development.
+            </li>
+          </ul>
+        </section>
+  
+        <section class="mt-8">
+          <h2 class="text-2xl font-semibold mb-4">
+            Getting Started with JavaScript
+          </h2>
+          <p class="mb-4">
+            Let's dive into the basics of JavaScript by writing a simple script.
+            You can run JavaScript in any web browser, but here's how you can add
+            it to an HTML file.
+          </p>
+  
+          <h3 class="text-xl font-semibold mt-6 mb-2">
+            1. Adding JavaScript to an HTML Page
+          </h3>
+          <pre class="bg-gray-200 p-4 rounded-md mb-4"><code>&lt;!DOCTYPE html&gt;
+  &lt;html lang="en"&gt;
+    &lt;head&gt;
+      &lt;meta charset="UTF-8"&gt;
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+      &lt;title&gt;JavaScript Example&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+  
+      &lt;h1&gt;Welcome to My JavaScript Page&lt;/h1&gt;
+      &lt;p id="demo"&gt;Click the button to change this text.&lt;/p&gt;
+  
+      &lt;button onclick="changeText()"&gt;Click me&lt;/button&gt;
+  
+      &lt;script&gt;
+        function changeText() {
+          document.getElementById("demo").innerHTML = "You clicked the button!";
+        }
+      &lt;/script&gt;
+  
+    &lt;/body&gt;
+  &lt;/html&gt;
+  </code></pre>
+          <p>
+            This simple example showcases how JavaScript can interact with the DOM
+            and dynamically change page content.
+          </p>
+        </section>
+  
+        <section class="mt-8">
+          <h3 class="text-xl font-semibold mb-4">2. Basic JavaScript Syntax</h3>
+          <p>Here are a few key concepts to get started:</p>
+  
+          <h4 class="font-semibold mt-6">Variables</h4>
+          <pre
+            class="bg-gray-200 p-4 rounded-md mb-4"
+          ><code>let name = "John";  // Modern variable declaration
+  const age = 25;     // Constant variable, cannot be changed</code></pre>
+  
+          <h4 class="font-semibold mt-6">Functions</h4>
+          <pre class="bg-gray-200 p-4 rounded-md mb-4"><code>function greet() {
+    console.log("Hello, World!");
+  }
+  greet();  // Calls the function</code></pre>
+  
+          <h4 class="font-semibold mt-6">Events</h4>
+          <pre
+            class="bg-gray-200 p-4 rounded-md mb-4"
+          ><code>document.getElementById("myButton").onclick = function() {
+    alert("Button clicked!");
+  };</code></pre>
+        </section>
+  
+        <section class="mt-8">
+          <h2 class="text-2xl font-semibold mb-4">JavaScript and APIs</h2>
+          <p class="mb-4">
+            JavaScript can communicate with external data sources using APIs.
+            Here's an example using the Fetch API to retrieve data:
+          </p>
+  
+          <pre
+            class="bg-gray-200 p-4 rounded-md mb-4"
+          ><code>fetch('https://api.example.com/data')
+    .then(response =&gt; response.json())
+    .then(data =&gt; console.log(data))
+    .catch(error =&gt; console.log(error));</code></pre>
+        </section>
+  
+        <section class="mt-8">
+          <h2 class="text-2xl font-semibold mb-4">Next Steps in JavaScript</h2>
+          <p class="mb-4">
+            Once you're familiar with JavaScript basics, you can explore advanced
+            topics like:
+          </p>
+          <ul class="list-disc list-inside space-y-2">
+            <li>ES6+ Features: Arrow functions, promises, classes, and more.</li>
+            <li>
+              Asynchronous JavaScript: Learn about AJAX, Promises, async/await for
+              handling asynchronous tasks.
+            </li>
+            <li>
+              JavaScript Frameworks: Explore frameworks like React, Vue.js, or
+              Angular for building complex applications.
+            </li>
+          </ul>
+        </section>
+  
+        <section class="mt-8">
+          <h2 class="text-2xl font-semibold mb-4">Conclusion</h2>
+          <p>
+            JavaScript is an essential language for web developers. It powers
+            interactivity, enhances user experiences, and enables developers to
+            create responsive, dynamic web applications. By mastering JavaScript,
+            you'll be able to build rich, interactive websites and explore
+            advanced programming concepts.
+          </p>
+          <p class="mt-4">
+            Now that you've got a basic understanding, it;s time to start writing
+            your own JavaScript. Happy coding!
+          </p>
+        </section>
+      </main>
+  
+     <!-- Footer Open -->
+
+     <footer class="bg-white font-sans tracking-wide">
+      <div class="py-12 px-12">
+        <div class="flex flex-wrap items-center sm:justify-between max-sm:flex-col gap-6">
+          <div>
+            <a href="/" class="font-bold text-2xl">TechFlux
+            </a>
+          </div>
+
+          <ul class="flex items-center justify-center flex-wrap gap-y-2 md:justify-end space-x-6">
+            <li><a href='/'
+              class='lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]'>Home</a></li>
+            <li><a href='/about.html'
+              class='lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]'>About</a></li>
+
+            <li><a href='/contact.html'
+              class='lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]'>Contact</a></li>
+          </ul>
+        </div>
+
+        <hr class="my-6 border-gray-500" />
+
+        <p class='text-center text-gray-600 text-base'>© TechFlux. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Footer Close -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>

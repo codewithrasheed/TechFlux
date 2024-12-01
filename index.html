@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechFlux Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+  </head>
+  <body class="font-sans leading-relaxed text-gray-800">
+
+
+
+  <!-- Header Open -->
+  <header class='flex border-b py-3 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide fixed  w-full z-50'>
+    <div class='flex flex-wrap justify-between items-center gap-5 w-full'>
+      <a href="/" class="font-bold text-2xl">TechFlux
+      </a>
+
+      <div id="collapseMenu"
+        class='max-lg:hidden lg:!block max-lg:w-full max-lg:fixed max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50'>
+        <button id="toggleClose" class='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white w-9 h-9 flex items-center justify-center border'>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 fill-black" viewBox="0 0 320.591 320.591">
+            <path
+              d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
+              data-original="#000000"></path>
+            <path
+              d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
+              data-original="#000000"></path>
+          </svg>
+        </button>
+
+        <ul
+          class='lg:flex lg:ml-14 lg:gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
+          <li class='mb-6 hidden max-lg:block'>
+            <a href="/" class="font-bold text-2xl">TechFlux
+            </a>
+            </a>
+          </li>
+          <li class='max-lg:border-b max-lg:py-3 px-3'>
+            <a href='/'
+              class='lg:hover:text-[#007bff] text-[#007bff] block font-semibold text-[15px]'>Home</a>
+          </li>
+          <li class='max-lg:border-b max-lg:py-3 px-3'><a href='/about.html'
+            class='lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]'>About</a>
+          </li>
+          <li class='max-lg:border-b max-lg:py-3 px-3'><a href='/contact.html'
+            class='lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]'>Contact</a>
+          </li>
+          </li>
+        </ul>
+      </div>
+
+      <button id="toggleOpen" class='lg:hidden ml-auto'>
+        <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+
+    </div>
+  </header>
+  <!-- Header Close -->
+
+
+    <!-- Banner Open -->
+    <div class="relative font-sans before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
+      <img src="https://readymadeui.com/cardImg.webp" alt="Banner Image" class="absolute inset-0 w-full h-full object-cover" />
+
+      <div class="min-h-[550px] relative z-30 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
+        <h2 class="sm:text-4xl text-2xl font-bold mb-6">Welcome to TechFlux</h2>
+        <p class="sm:text-lg text-base text-center text-gray-200">Stay ahead of the curve with the latest insights and trends in technology. Explore, learn, and grow with us!</p>
+
+       <a href="#blogs">
+         <button
+         type="button"
+         class="mt-12 bg-transparent text-white text-base py-3 px-6 border border-white rounded-lg hover:bg-white hover:text-black transition duration-300">
+         Start Exploring
+        </button>
+      </a>
+      </div>
+    </div>
+    <!-- Banner Close -->
+
+
+    <!-- Cards Open -->
+
+    <div id="blogs" class="mt-16 mb-12">
+
+    <div
+    class="bg-white grid lg:grid-cols-2 items-center shadow-[0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-4xl mb-8 max-lg:max-w-lg rounded-lg overflow-hidden mx-auto mt-4 h-full">
+    <div class="min-h-[280px] h-full">
+      <img src="assets/blog1.png" class="w-full h-[350px] object-center" />
+    </div>
+
+    <div class="p-6">
+      <h3 class="text-xl font-semibold">Introduction to Javascript - The Language of the web</h3>
+      <p class="mt-3 text-sm text-gray-500 leading-relaxed">JavaScript is the backbone of modern web development, transforming static websites into dynamic, interactive platforms. Dive into how it enables real-time updates, user interactions, and smooth navigation, making the web more engaging and functional than ever before.
+      </p>
+
+      <a href="/javascript-intro.html">
+
+        <button
+        type="button"
+        class="mt-12 bg-transparent text-black text-base py-3 px-6 border border-black rounded-lg hover:bg-black hover:text-white transition duration-300 w-full">
+        Read More
+      </button>
+    </a>
+        <p class="mt-4 text-sm text-gray-400">
+          Posted by <span class="font-semibold text-gray-600">TechFlux</span> on <span class="text-gray-500">November 8, 2024</span>
+        </p>
+    </div>
+  </div>
+
+    <div
+    class="bg-white grid lg:grid-cols-2 items-center shadow-[0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-4xl max-lg:max-w-lg rounded-lg font-[sans-serif] overflow-hidden mx-auto mt-4 h-full">
+    <div class="min-h-[280px] h-full">
+      <img src="assets/blog2.png" class="w-full h-[350px] object-cover" />
+    </div>
+
+    <div class="p-6">
+      <h3 class="text-xl font-semibold">Digital Privacy and Data Protection</h3>
+      <p class="mt-3 text-sm text-gray-500 leading-relaxed">Digital privacy is a cornerstone of modern online interaction, ensuring that personal information remains secure and that individuals retain control over their data. Dive into how data is collected, the risks involved, and essential steps to protect yourself in an increasingly interconnected world. From understanding government regulations to emerging privacy technologies, learn how to stay safe in the digital age.
+      </p>
+
+      <a href="/digital-privacy.html">
+      <button
+          type="button"
+          class="mt-12 bg-transparent text-black text-base py-3 px-6 border border-black rounded-lg hover:bg-black hover:text-white transition duration-300 w-full">
+            Read More
+          </button>
+        </a>
+        <p class="mt-4 text-sm text-gray-400">
+          Posted by <span class="font-semibold text-gray-600">TechFlux</span> on <span class="text-gray-500">December 1, 2024</span>
+        </p>
+    </div>
+  </div>
+</div>
+
+    <!-- Cards Close -->
+
+
+    <!-- Footer Open -->
+
+    <footer class="bg-white font-sans tracking-wide">
+      <div class="py-12 px-12">
+        <div class="flex flex-wrap items-center sm:justify-between max-sm:flex-col gap-6">
+          <div>
+            <a href="/" class="font-bold text-2xl">TechFlux
+            </a>
+          </div>
+
+          <ul class="flex items-center justify-center flex-wrap gap-y-2 md:justify-end space-x-6">
+            <li><a href='/'
+              class='lg:hover:text-[#007bff] text-[#007bff] block font-semibold text-[15px]'>Home</a></li>
+            <li><a href='/about.html'
+              class='lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]'>About</a></li>
+
+            <li><a href='/contact.html'
+              class='lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]'>Contact</a></li>
+          </ul>
+        </div>
+
+        <hr class="my-6 border-gray-500" />
+
+        <p class='text-center text-gray-600 text-base'>© TechFlux. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Footer Close -->
+
+
+
+
+    <script src="script.js"></script>
+    
+  </body>
+</html>
