@@ -6,87 +6,111 @@
     <title>Introduction to Software Engineering</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
+  <div id="preloader">
+    <div class="flex justify-center items-center h-screen">
+      <img src="assets/loader.gif" width="150" alt="loader">
+      <h1
+      class="text-black font-bold flex justify-center h-screen items-center text-4xl animate-fade"
+      >
+      Tech<span class="text-blue-600">Flux</span>
+    </h1>
+  </div>
+  </div>
     <!-- Header Open -->
-    <header class='flex py-3 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide relative z-50'>
-      <div class='flex justify-between flex-wrap items-center gap-5 w-full'>
-          <a href="/" class="font-bold text-2xl">TechFlux</a>
-
+    <header class='flex border-b py-3 px-4 sm:px-10 bg-white min-h-[70px] tracking-wide fixed w-full z-50'>
+        <div class='flex flex-wrap justify-between items-center gap-5 w-full'>
+          <a href="/" class="font-bold text-2xl">Tech<span class="text-blue-600">Flux</span>
+          </a>
+    
           <div id="collapseMenu"
-              class='max-lg:hidden lg:!block max-lg:w-full max-lg:fixed max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50'>
-              <button id="toggleClose" class='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white w-9 h-9 flex items-center justify-center border'>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 fill-black" viewBox="0 0 320.591 320.591">
-                      <path
-                          d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
-                          data-original="#000000"></path>
-                      <path
-                          d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
-                          data-original="#000000"></path>
-                  </svg>
-              </button>
-
-              <ul class='lg:flex lg:ml-14 lg:gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
-                  <li class='mb-6 hidden max-lg:block'>
-                      <a href="/" class="font-bold text-2xl">TechFlux</a>
-                  </li>
-                  <li class='max-lg:border-b max-lg:py-3 px-3'>
-                      <a href='index.html' class='lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]'>Home</a>
-                  </li>
-                  <li class='max-lg:border-b max-lg:py-3 px-3'>
-                      <a href='about.html' class='lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]'>About</a>
-                  </li>
-                  <li class='max-lg:border-b max-lg:py-3 px-3'>
-                      <a href='contact.html' class='lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]'>Contact</a>
-                  </li>
-              </ul>
-          </div>
-
-          <button id="toggleOpen" class='lg:hidden ml-auto'>
-              <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                      d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                      clip-rule="evenodd"></path>
+            class='max-lg:hidden lg:!block max-lg:w-full max-lg:fixed max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50'>
+            <button id="toggleClose" class='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white w-9 h-9 flex items-center justify-center border'>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 fill-black" viewBox="0 0 320.591 320.591">
+                <path
+                  d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
+                  data-original="#000000"></path>
+                <path
+                  d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
+                  data-original="#000000"></path>
               </svg>
+            </button>
+    
+            <ul
+              class='lg:flex lg:ml-14 lg:gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
+              <li class='mb-6 hidden max-lg:block'>
+                <a href="/" class="font-bold text-2xl">Tech<span class="text-blue-600">Flux</span>
+                </a>
+              </li>
+              <li class='max-lg:border-b max-lg:py-3 px-3'>
+                <a href='/'
+                  class='lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]'>Home</a>
+              </li>
+              <li class='max-lg:border-b max-lg:py-3 px-3'><a href='/about.html'
+                class='lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]'>About</a>
+              </li>
+              <li class='max-lg:border-b max-lg:py-3 px-3'><a href='/blog.html'
+                class='lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]'>Blog</a>
+              </li>
+              <li class='max-lg:border-b max-lg:py-3 px-3'><a href='/contact.html'
+                class='lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]'>Contact</a>
+              </li>
+            </ul>
+          </div>
+    
+          <button id="toggleOpen" class='lg:hidden ml-auto'>
+            <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"></path>
+            </svg>
           </button>
-      </div>
-  </header>
+    
+        </div>
+      </header>
 <!-- Header Close -->
 
 
   <!-- Banner Open -->
-  <div class="relative font-sans before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10 ">
-    <img src="https://readymadeui.com/cardImg.webp" alt="Banner Image" class="absolute inset-0 w-full h-full object-cover" />
+  <div id="header" class="relative font-sans before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
+    <img src="assets/software-eng-bg.jpg" alt="Banner" class="absolute inset-0 w-full h-full object-cover" />
 
-    <div class="min-h-[550px] relative z-30 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
-      <h2 class="sm:text-4xl text-2xl font-bold mb-6">Software Engineering: A Comprehensive Guide</h2>
-      <p class="sm:text-lg text-base text-center text-gray-200 w-full xl:w-[700px]">Software engineering is a disciplined and systematic approach to the development, operation, and maintenance of software. It combines principles from computer science, engineering, and project management to deliver high-quality software that meets user needs and is maintainable over time. Below is an overview of the essential aspects of software engineering.</p>
+    <div class="min-h-[400px] md:min-h-[550px] relative z-30 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-4 md:p-6">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 ">Software Engineering: A Comprehensive Guide</h2>
+      <p class="text-sm md:text-base lg:text-lg text-center text-gray-200 w-full lg:w-4/5 xl:w-[700px]">Software engineering is a disciplined and systematic approach to the development, operation, and maintenance of software. It combines principles from computer science, engineering, and project management to deliver high-quality software that meets user needs and is maintainable over time. Below is an overview of the essential aspects of software engineering.</p>
     </div>
   </div>
   <!-- Banner Close -->
-  
-     <!-- Main Content -->
-<main class="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-md my-8">
+  <a href="/software-engineering.html#header">
+    <div id="gototop" class="go-to-top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+   </a>
+  <!-- Main Content -->
+  <main class="w-full max-w-4xl mx-auto p-4 md:p-8 bg-white rounded-lg shadow-md my-4 md:my-8">
     <section>
-        <h2 class="text-2xl font-semibold mb-4">Understanding Software Engineering</h2>
-        <h3 class="text-xl font-semibold mb-4">1. What is Software Engineering?</h3>
-        <p class="mb-4">
+        <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Understanding Software Engineering</h2>
+        <h3 class="text-lg md:text-xl font-semibold mb-3 md:mb-4">1. What is Software Engineering?</h3>
+        <p class="mb-4 text-sm md:text-base">
             Software engineering is the application of engineering principles to the design, development, testing, and maintenance of software. It ensures that software is reliable, scalable, and meets user needs through systematic and disciplined practices.
         </p>
 
-        <h3 class="text-xl font-semibold mt-8 mb-4">2. Importance of Software Engineering</h3>
-        <p class="mb-4">
+        <h3 class="text-lg md:text-xl font-semibold mt-6 md:mt-8 mb-3 md:mb-4">2. Importance of Software Engineering</h3>
+        <p class="mb-4 text-sm md:text-base">
             By following structured methodologies, software engineering helps organizations create high-quality software efficiently. It bridges the gap between user expectations and technical execution, ensuring optimal performance and longevity of applications.
         </p>
     </section>
 
-    <section class="mt-8">
-        <h2 class="text-2xl font-semibold mb-4">The Software Development Life Cycle (SDLC)</h2>
-        <h3 class="text-xl font-semibold mt-6 mb-2">Phases of SDLC</h3>
-        <p class="mb-4">
+    <section class="mt-6 md:mt-8">
+        <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">The Software Development Life Cycle (SDLC)</h2>
+        <h3 class="text-lg md:text-xl font-semibold mt-4 md:mt-6 mb-2">Phases of SDLC</h3>
+        <p class="mb-4 text-sm md:text-base">
             The SDLC is a structured process for developing software, encompassing the following phases:
         </p>
-        <ul class="list-disc list-inside space-y-2">
+        <ul class="list-disc list-inside space-y-1 md:space-y-2 text-sm md:text-base">
             <li><strong>Planning:</strong> Defines project objectives, scope, and feasibility.</li>
             <li><strong>Requirements Gathering:</strong> Identifies user needs and system specifications.</li>
             <li><strong>Design:</strong> Establishes system architecture and detailed design blueprints.</li>
@@ -97,36 +121,36 @@
         </ul>
     </section>
 
-    <section class="mt-8">
-        <h2 class="text-2xl font-semibold mb-4">Popular SDLC Models</h2>
-        <h3 class="text-xl font-semibold mt-6 mb-2">1. Waterfall Model</h3>
-        <p class="mb-4">
+    <section class="mt-6 md:mt-8">
+        <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Popular SDLC Models</h2>
+        <h3 class="text-lg md:text-xl font-semibold mt-4 md:mt-6 mb-2">1. Waterfall Model</h3>
+        <p class="mb-4 text-sm md:text-base">
             A linear and sequential approach where each phase must be completed before the next begins. Suitable for projects with clearly defined requirements.
         </p>
 
-        <h3 class="text-xl font-semibold mt-6 mb-2">2. Agile Model</h3>
-        <p class="mb-4">
+        <h3 class="text-lg md:text-xl font-semibold mt-4 md:mt-6 mb-2">2. Agile Model</h3>
+        <p class="mb-4 text-sm md:text-base">
             Focuses on iterative development and collaboration, adapting to changing requirements through continuous feedback and incremental progress.
         </p>
 
-        <h3 class="text-xl font-semibold mt-6 mb-2">3. Spiral Model</h3>
-        <p class="mb-4">
+        <h3 class="text-lg md:text-xl font-semibold mt-4 md:mt-6 mb-2">3. Spiral Model</h3>
+        <p class="mb-4 text-sm md:text-base">
             Combines iterative development with risk management, making it ideal for complex and large-scale projects.
         </p>
 
-        <h3 class="text-xl font-semibold mt-6 mb-2">4. DevOps</h3>
-        <p class="mb-4">
+        <h3 class="text-lg md:text-xl font-semibold mt-4 md:mt-6 mb-2">4. DevOps</h3>
+        <p class="mb-4 text-sm md:text-base">
             Emphasizes collaboration between development and operations teams to enable continuous integration and delivery (CI/CD).
         </p>
     </section>
 
-    <section class="mt-8">
-        <h2 class="text-2xl font-semibold mb-4">SDLC in AI Development</h2>
-        <h3 class="text-xl font-semibold mt-6 mb-2">Key Considerations</h3>
-        <p class="mb-4">
+    <section class="mt-6 md:mt-8">
+        <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">SDLC in AI Development</h2>
+        <h3 class="text-lg md:text-xl font-semibold mt-4 md:mt-6 mb-2">Key Considerations</h3>
+        <p class="mb-4 text-sm md:text-base">
             The advent of artificial intelligence has introduced new dimensions to SDLC. Key considerations for AI development include:
         </p>
-        <ul class="list-disc list-inside space-y-2">
+        <ul class="list-disc list-inside space-y-1 md:space-y-2 text-sm md:text-base">
             <li><strong>Data-Centric Development:</strong> Emphasizes collecting, preprocessing, and validating large datasets for model training.</li>
             <li><strong>Model Training and Testing:</strong> Utilizes tools like TensorFlow and PyTorch for developing machine learning models.</li>
             <li><strong>Deployment of AI Models:</strong> Often involves deploying AI systems as microservices in scalable cloud environments.</li>
@@ -134,149 +158,87 @@
         </ul>
     </section>
 
-    <section class="mt-8">
-        <h2 class="text-2xl font-semibold mb-4">Best Practices in Software Engineering</h2>
-        <h3 class="text-xl font-semibold mt-6 mb-2">1. Version Control</h3>
-        <p class="mb-4">
+    <section class="mt-6 md:mt-8">
+        <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Best Practices in Software Engineering</h2>
+        <h3 class="text-lg md:text-xl font-semibold mt-4 md:mt-6 mb-2">1. Version Control</h3>
+        <p class="mb-4 text-sm md:text-base">
             Tools like Git enable teams to collaborate effectively, track changes, and maintain code integrity.
         </p>
 
-        <h3 class="text-xl font-semibold mt-6 mb-2">2. Testing Automation</h3>
-        <p class="mb-4">
+        <h3 class="text-lg md:text-xl font-semibold mt-4 md:mt-6 mb-2">2. Testing Automation</h3>
+        <p class="mb-4 text-sm md:text-base">
             Automated testing reduces errors, accelerates delivery, and ensures high-quality software.
         </p>
 
-        <h3 class="text-xl font-semibold mt-6 mb-2">3. Documentation</h3>
-        <p class="mb-4">
+        <h3 class="text-lg md:text-xl font-semibold mt-4 md:mt-6 mb-2">3. Documentation</h3>
+        <p class="mb-4 text-sm md:text-base">
             Comprehensive documentation aids understanding, future maintenance, and onboarding new team members.
         </p>
     </section>
 
-    <section class="mt-8">
-        <h2 class="text-2xl font-semibold mb-4">Conclusion: The Future of Software Engineering</h2>
-        <p>
+    <section class="mt-6 md:mt-8">
+        <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Conclusion: The Future of Software Engineering</h2>
+        <p class="text-sm md:text-base">
             Software engineering is at the forefront of technological innovation, shaping the tools and systems that drive modern life. By adopting structured methodologies like SDLC, exploring emerging models, and leveraging AI, engineers can build software that is robust, scalable, and ethically responsible. As technology continues to evolve, the role of software engineers remains pivotal in creating a secure, efficient, and equitable digital future.
         </p>
     </section>
-</main>
-<!-- Main Content Close -->
+  </main>
+  <!-- Main Content Close -->
 
   
-     <!-- Footer Open -->
-
-     <footer class="bg-white font-sans tracking-wide">
-      <div class="py-12 px-12">
-        <div class="flex flex-wrap items-center sm:justify-between max-sm:flex-col gap-6">
-          <div>
-            <a href="/" class="font-bold text-2xl">TechFlux
-            </a>
-          </div>
-
-          <ul class="flex items-center justify-center flex-wrap gap-y-2 md:justify-end space-x-6">
-            <li><a href='/'
-              class='lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]'>Home</a></li>
-            <li><a href='/about.html'
-              class='lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]'>About</a></li>
-
-            <li><a href='/contact.html'
-              class='lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]'>Contact</a></li>
-          </ul>
+  <!-- Footer -->
+  <footer class="mt-auto bg-gray-800 text-white pt-8 pb-4">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="footer-col mx-0 sm:mx-2 md:mx-5 mb-6 md:mb-0">
+                <h3 class="font-bold text-lg mb-4">TechFlux</h3>
+                <p class="text-sm md:text-base mb-4">Delivering insightful content on emerging technologies, best practices, and industry trends in tech.</p>
+                <div class="social-links flex space-x-3">
+                    <a href="#" class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center"><span>f</span></a>
+                    <a href="#" class="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center"><span>t</span></a>
+                    <a href="#" class="w-8 h-8 bg-blue-800 rounded-full flex items-center justify-center"><span>in</span></a>
+                    <a href="#" class="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center"><span>ig</span></a>
+                </div>
+            </div>
+            
+            <div class="footer-col mb-6 md:mb-0">
+                <h3 class="font-bold text-lg mb-4">Famous Blogs</h3>
+                <ul class="text-sm md:text-base space-y-2">
+                    <li><a href="software-engineering.html" class="hover:text-blue-300">Software Engineering</a></li>
+                    <li><a href="cybersecurity.html" class="hover:text-blue-300">Cybersecurity</a></li>
+                    <li><a href="javascript-intro.html" class="hover:text-blue-300">Programming</a></li>
+                    <li><a href="cloud-computing.html" class="hover:text-blue-300">Cloud Computing</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col mb-6 md:mb-0">
+                <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+                <ul class="text-sm md:text-base space-y-2">
+                    <li><a href="/" class="hover:text-blue-300">Home</a></li>
+                    <li><a href="blog.html" class="hover:text-blue-300">Blogs</a></li>
+                    <li><a href="about.html" class="hover:text-blue-300">About Us</a></li>
+                    <li><a href="contact.html" class="hover:text-blue-300">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col mb-6 md:mb-0">
+                <h3 class="font-bold text-lg mb-4">Contact</h3>
+                <ul class="text-sm md:text-base space-y-2">
+                    <li>info@techfluxblogs.com</li>
+                    <li>+1 (555) 123-4567</li>
+                    <li>123 Tech Avenue, San Francisco, CA 94107</li>
+                </ul>
+            </div>
         </div>
+        
+        <div class="footer-bottom border-t border-gray-700 mt-8 pt-4 text-center text-sm">
+            <p>&copy; 2025 TechFlux Blogs. All rights reserved.</p>
+        </div>
+    </div>
+  </footer>
+  <!-- Footer Close -->
 
-        <hr class="my-6 border-gray-500" />
-
-        <p class='text-center text-gray-600 text-base'>© TechFlux. All rights reserved.</p>
-      </div>
-    </footer>
-
-    <!-- Footer Close -->
-
-
-    <script type="module">
-        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
-        Chatbot.init({
-            chatflowid: "bac9d0ee-e5c4-4dc0-a0ef-129906494713",
-            apiHost: "https://flowise-production-6fa9.up.railway.app",
-            chatflowConfig: {
-                // topK: 2
-            },
-            theme: {
-                button: {
-                    backgroundColor: "#3B81F6",
-                    right: 20,
-                    bottom: 20,
-                    size: 48, // small | medium | large | number
-                    dragAndDrop: true,
-                    iconColor: "white",
-                    customIconSrc: "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
-                    autoWindowOpen: {
-                        autoOpen: false, //parameter to control automatic window opening
-                        openDelay: 2, // Optional parameter for delay time in seconds
-                        autoOpenOnMobile: false, //parameter to control automatic window opening in mobile
-                        },
-                },
-                tooltip: {
-                    showTooltip: true,
-                    tooltipMessage: 'Hi There 👋!',
-                    tooltipBackgroundColor: 'black',
-                    tooltipTextColor: 'white',
-                    tooltipFontSize: 16,
-                },
-                chatWindow: {
-                    showTitle: true,
-                    title: 'Software Engineering Bot',
-                    titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
-                    showAgentMessages: true,
-                    welcomeMessage: 'Hello i am a Software Engineering Bot. How can I help you?',
-                    errorMessage: 'Error occured. Please try again.',
-                    backgroundColor: "#ffffff",
-                    backgroundImage: 'enter image path or link', // If set, this will overlap the background color of the chat window.
-                    height: 500,
-                    width: 400,
-                    fontSize: 16,
-                    //starterPrompts: ['What is a bot?', 'Who are you?'], // It overrides the starter prompts set by the chat flow passed
-                    starterPromptFontSize: 15,
-                    clearChatOnReload: false, // If set to true, the chat will be cleared when the page reloads.
-                    botMessage: {
-                        backgroundColor: "#f7f8ff",
-                        textColor: "#303235",
-                        showAvatar: true,
-                        avatarSrc: "https://images.credly.com/images/1e3e36a0-ab85-40f7-802e-006e90211db6/Software_Engineering_GVSU_Badge.png",
-                    },
-                    userMessage: {
-                        backgroundColor: "#3B81F6",
-                        textColor: "#ffffff",
-                        showAvatar: true,
-                        avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
-                    },
-                    textInput: {
-                        placeholder: 'Type your question',
-                        backgroundColor: '#ffffff',
-                        textColor: '#303235',
-                        sendButtonColor: '#3B81F6',
-                        maxChars: 50,
-                        maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 50 characters.',
-                        autoFocus: true, // If not used, autofocus is disabled on mobile and enabled on desktop. true enables it on both, false disables it on both.
-                        sendMessageSound: true,
-                        // sendSoundLocation: "send_message.mp3", // If this is not used, the default sound effect will be played if sendSoundMessage is true.
-                        receiveMessageSound: true,
-                        // receiveSoundLocation: "receive_message.mp3", // If this is not used, the default sound effect will be played if receiveSoundMessage is true. 
-                    },
-                    feedback: {
-                        color: '#303235',
-                    },
-                    footer: {
-                        textColor: '#303235',
-                        text: 'Powered by',
-                        company: 'Rasheed Ahmed',
-                        companyLink: 'https://linktr.ee/rasheed_ahmed',
-                    }
-                }
-            }
-        })
-    </script>
-
-    <script src="script.js"></script>
+  <script defer src="script.js"></script>
 
 </body>
 </html>

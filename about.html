@@ -8,16 +8,24 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="font-sans leading-relaxed text-gray-800">
-
- 
-
+  <div id="preloader">
+    <div class="flex justify-center items-center h-screen">
+      <img src="assets/loader.gif" width="150" alt="loader">
+      <h1
+      class="text-black font-bold flex justify-center h-screen items-center text-4xl animate-fade"
+      >
+      Tech<span class="text-blue-600">Flux</span>
+    </h1>
+  </div>
+  </div>
   <!-- Header Open -->
-  <header class='flex border-b py-3 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide fixed  w-full z-50'>
+  <header class='flex border-b py-3 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide fixed w-full z-50'>
     <div class='flex flex-wrap justify-between items-center gap-5 w-full'>
-      <a href="/" class="font-bold text-2xl">TechFlux
+      <a href="/" class="font-bold text-2xl">Tech<span class="text-blue-600">Flux</span>
       </a>
 
       <div id="collapseMenu"
@@ -36,8 +44,7 @@
         <ul
           class='lg:flex lg:ml-14 lg:gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
           <li class='mb-6 hidden max-lg:block'>
-            <a href="/" class="font-bold text-2xl">TechFlux
-            </a>
+            <a href="/" class="font-bold text-2xl">Tech<span class="text-blue-600">Flux</span>
             </a>
           </li>
           <li class='max-lg:border-b max-lg:py-3 px-3'>
@@ -47,9 +54,11 @@
           <li class='max-lg:border-b max-lg:py-3 px-3'><a href='/about.html'
             class='lg:hover:text-[#007bff] text-[#007bff] block font-semibold text-[15px]'>About</a>
           </li>
+          <li class='max-lg:border-b max-lg:py-3 px-3'><a href='/blog.html'
+            class='lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]'>Blog</a>
+          </li>
           <li class='max-lg:border-b max-lg:py-3 px-3'><a href='/contact.html'
             class='lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]'>Contact</a>
-          </li>
           </li>
         </ul>
       </div>
@@ -67,71 +76,101 @@
   <!-- Header Close -->
 
    <!-- Banner Section Open -->
-   <div class="relative font-sans before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
-    <img src="assets/about-banner.jpg" alt="Banner Image" class="absolute inset-0 w-full h-full object-cover" />
+   <div id="header" class="relative font-sans before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
+    <img src="assets/about-banner.jpg" alt="Banner" class="absolute inset-0 w-full h-full object-cover" />
 
-    <div class="min-h-[550px] relative z-30 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
-      <h2 class="sm:text-4xl text-2xl font-bold mb-6">About TechFlux</h2>
-      <p class="sm:text-lg text-base text-center text-gray-200 w-full xl:w-[700px]">TechFlux is a leading technology blog dedicated to delivering cutting-edge information and insights on the latest trends in the tech world. Our goal is to provide readers with in-depth articles, reviews, tutorials, and more to keep them informed and ahead of the curve.
+    <div class="min-h-[350px] md:min-h-[550px] relative z-30 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-4 md:p-6">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">About TechFlux</h2>
+      <p class="text-sm md:text-base lg:text-lg text-center text-gray-200 w-full xl:w-[700px]">TechFlux is a leading technology blog dedicated to delivering cutting-edge information and insights on the latest trends in the tech world. Our goal is to provide readers with in-depth articles, reviews, tutorials, and more to keep them informed and ahead of the curve.
     </p>
     </div>
   </div>
   <!-- Banner Section Close -->
-
+  <a href="/about.html#header">
+    <div id="gototop" class="go-to-top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+   </a>
   <!-- About Section Open -->
-  <div class="py-16 px-6 sm:px-16 max-w-6xl mx-auto">
-    <h2 class="text-2xl font-semibold mb-4">Our Mission</h2>
-    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+  <div class="py-8 md:py-16 px-4 md:px-6 lg:px-16 max-w-6xl mx-auto">
+    <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Our Mission</h2>
+    <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-6 md:mb-8">
       Our mission is to empower tech enthusiasts, developers, and innovators by providing them with reliable and timely information. We strive to create an engaging and educational platform that bridges the gap between complex tech concepts and everyday understanding.
     </p>
 
-    <h2 class="text-2xl font-semibold mb-4">What We Offer</h2>
-    <ul class="list-disc pl-8 text-lg text-gray-600">
-      <li class="mb-4">In-depth articles on technology trends, software, and hardware.</li>
-      <li class="mb-4">Expert reviews and comparisons to help you make informed decisions.</li>
-      <li class="mb-4">Practical tutorials for developers, engineers, and enthusiasts.</li>
-      <li class="mb-4">Insights into cybersecurity, data privacy, and emerging technologies.</li>
+    <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">What We Offer</h2>
+    <ul class="list-disc pl-5 md:pl-8 text-base md:text-lg text-gray-600">
+      <li class="mb-2 md:mb-4">In-depth articles on technology trends, software, and hardware.</li>
+      <li class="mb-2 md:mb-4">Expert reviews and comparisons to help you make informed decisions.</li>
+      <li class="mb-2 md:mb-4">Practical tutorials for developers, engineers, and enthusiasts.</li>
+      <li class="mb-2 md:mb-4">Insights into cybersecurity, data privacy, and emerging technologies.</li>
     </ul>
 
-    <h2 class="text-2xl font-semibold mb-4">Our Vision</h2>
-    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+    <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4 mt-6 md:mt-8">Our Vision</h2>
+    <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-6 md:mb-8">
       Our vision is to become the go-to destination for anyone looking to stay up-to-date with the rapidly changing technology landscape. We aim to foster a global community of tech lovers who are always eager to learn and innovate.
     </p>
 
-    <h2 class="text-2xl font-semibold mb-4">Join Us on Our Journey</h2>
-    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+    <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Join Us on Our Journey</h2>
+    <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-6 md:mb-8">
       Whether you're a seasoned developer, a curious learner, or just someone passionate about tech, TechFlux welcomes you. Stay tuned as we continue to explore, discover, and share the wonders of the tech world with you!
     </p>
   </div>
   <!-- About Section Close -->
 
-  <!-- Footer Open -->
-  <footer class="bg-white font-sans tracking-wide">
-    <div class="py-12 px-12">
-      <div class="flex flex-wrap items-center sm:justify-between max-sm:flex-col gap-6">
-        <div>
-          <a href="/" class="font-bold text-2xl">TechFlux</a>
+ <!-- Footer -->
+ <footer class="mt-auto bg-gray-800 text-white pt-8 pb-4">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="footer-col mx-0 sm:mx-2 md:mx-5 mb-6 md:mb-0">
+        <h3 class="font-bold text-lg mb-4">TechFlux</h3>
+        <p class="text-sm md:text-base mb-4">Delivering insightful content on emerging technologies, best practices, and industry trends in tech.</p>
+        <div class="social-links flex space-x-3">
+          <a href="#" class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center"><span>f</span></a>
+          <a href="#" class="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center"><span>t</span></a>
+          <a href="#" class="w-8 h-8 bg-blue-800 rounded-full flex items-center justify-center"><span>in</span></a>
+          <a href="#" class="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center"><span>ig</span></a>
         </div>
-
-        <ul class="flex items-center justify-center flex-wrap gap-y-2 md:justify-end space-x-6">
-          <li><a href='/'
-              class='lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]'>Home</a></li>
-          <li><a href='/about.html'
-              class='lg:hover:text-[#007bff] text-[#007bff] block font-semibold text-[15px]'>About</a></li>
-
-          <li><a href='/contact.html'
-              class='lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]'>Contact</a></li>
+      </div>
+        
+      <div class="footer-col mb-6 md:mb-0">
+        <h3 class="font-bold text-lg mb-4">Famous Blogs</h3>
+        <ul class="text-sm md:text-base space-y-2">
+          <li><a href="software-engineering.html" class="hover:text-blue-300">Software Engineering</a></li>
+          <li><a href="cybersecurity.html" class="hover:text-blue-300">Cybersecurity</a></li>
+          <li><a href="javascript-intro.html" class="hover:text-blue-300">Programming</a></li>
+          <li><a href="cloud-computing.html" class="hover:text-blue-300">Cloud Computing</a></li>
         </ul>
       </div>
-
-      <hr class="my-6 border-gray-500" />
-
-      <p class='text-center text-gray-600 text-base'>© TechFlux. All rights reserved.</p>
+        
+      <div class="footer-col mb-6 md:mb-0">
+        <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+        <ul class="text-sm md:text-base space-y-2">
+          <li><a href="/" class="hover:text-blue-300">Home</a></li>
+          <li><a href="blog.html" class="hover:text-blue-300">Blogs</a></li>
+          <li><a href="about.html" class="hover:text-blue-300">About Us</a></li>
+          <li><a href="contact.html" class="hover:text-blue-300">Contact</a></li>
+        </ul>
+      </div>
+        
+      <div class="footer-col mb-6 md:mb-0">
+        <h3 class="font-bold text-lg mb-4">Contact</h3>
+        <ul class="text-sm md:text-base space-y-2">
+          <li>info@techfluxblogs.com</li>
+          <li>+1 (555) 123-4567</li>
+          <li>123 Tech Avenue, San Francisco, CA 94107</li>
+        </ul>
+      </div>
     </div>
-  </footer>
-  <!-- Footer Close -->
+      
+    <div class="footer-bottom border-t border-gray-700 mt-8 pt-4 text-center text-sm">
+      <p>&copy; 2025 TechFlux Blogs. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<!-- Footer Close -->
 
-  <script src="script.js"></script>
+  <script defer src="script.js"></script>
 
 </body>
 
